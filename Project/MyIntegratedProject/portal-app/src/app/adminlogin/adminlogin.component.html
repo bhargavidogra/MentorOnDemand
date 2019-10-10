@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<div class="jumbotron text-center">
+    <h1>Login/Sign Up</h1>
+    <p>Welcome :) !</p>
+
+</div>
+<div class="bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-8">
+                <form method="post">
+                    <div>
+                        <fieldset>
+                            <legend>LOGIN :</legend>
+                            <P>Enter your login credentials:</P>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input [(ngModel)]="userName" placeholder="userName" name="userName" class="form-control" id="userName">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input [(ngModel)]="password" placeholder="password" name="password" class="form-control" id="password">
+                            </div>
+        
+                            
+                            <input type="reset" />
+                            
+                               <!-- <a routerLink="/user-dashboard"><button>submit</button></a> -->
+                                <button  (click)="validate(userName,password)">Submit</button>
+                                                         
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-2">
+        </div>
+    </div>
+</div>

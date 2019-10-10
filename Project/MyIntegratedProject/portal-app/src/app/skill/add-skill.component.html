@@ -1,0 +1,70 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<div class="bg">
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-8">
+
+
+  
+  <a style="margin-left:10px" routerLink="/addskill">Add Skill</a>
+<form>
+
+    <h2 class="text-center">Add Skill</h2>
+  <div class="form-group">
+    <label for="name">name:</label>
+    <input type="name" [(ngModel)]="skill.name" placeholder="name" name="name" class="form-control" id="name">
+  </div>
+
+  <div class="form-group">
+    <label for="toc">TOC:</label>
+    <input [(ngModel)]="skill.toc" placeholder="toc" name="toc" class="form-control" id="toc">
+  </div>
+
+  <div class="form-group">
+    <label for="prerequisites">prerequisites:</label>
+    <input [(ngModel)]="skill.prerequisites" placeholder="prerequisites" name="prerequisites" class="form-control" id="prerequisites">
+  </div>
+  <div class="form-group">
+    <label for="trainingId">trainingId:</label>
+    <input [(ngModel)]="skill.trainingId" placeholder="trainingId" name="trainingId" class="form-control" id="trainingId">
+  </div>
+
+  <div class="form-group">
+      <label for="createdAt">createdAt:</label>
+      <input [(ngModel)]="skill.createdAt" placeholder="createdAt" name="createdAt" class="form-control" id="createdAt">
+    </div>
+
+    <div class="form-group">
+        <label for="updatedAt">Update At:</label>
+        <input [(ngModel)]="skill.updatedAt" placeholder="updatedAt" name="updatedAt" class="form-control" id="updatedAt">
+      </div>
+  
+
+
+  <button class="btn btn-success" (click)="createSkill()">Create</button>
+</form>
+</div>
+<div class="col-lg-2">
+</div>
+</div>
+
+</div>
+</article>
+</div>
+
+
+<footer>
+<br>
+<br>
+<br>
+<br>
+</footer>
+

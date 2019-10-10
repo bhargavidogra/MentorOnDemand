@@ -1,0 +1,92 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <div class="container">
+        <div class="row">
+            <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <address>
+                            <strong>Payment Receipt</strong>
+                            <br>
+                            Delailed Report
+                            <br>
+                           Training Payment
+                            <br>
+                            <abbr title="Id">ID:</abbr> {{userpayment.id}}
+                        </address>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                        <p>
+                            <em><p id="demo"></p> </em>
+    
+   
+                        </p>
+                        <p>
+                            <em>createdAt:{{userpayment.createdAt}}</em>
+                            <br>
+                            <em>updatedAt : {{userpayment.updatedAt}}</em>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center">
+                        <h1>Payment Details Receipt</h1>
+                    </div>
+                   
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>{{userpayment.txnType}}</th>
+                                <th>Mentor Name:{{userpayment.mentorName}}</th>
+                                <th class="text-center">Mentor Id</th>
+                                <th class="text-center">{{userpayment.mentorId}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-md-9"><em>Training Id</em></td>
+                                <td class="col-md-1" style="text-align: center"> {{userpayment.trainingId}} </td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="col-md-9"><em>PaymentType</em></td>
+                                <td class="col-md-1" style="text-align: center">{{userpayment.paymentType}} </td>
+                                
+                            </tr>
+                           
+                            <tr>
+                                <td>   </td>
+                                <td>   </td>
+                                <td class="text-right">
+                                <p>
+                                    <strong>Subtotal: </strong>
+                                </p>
+                                <p>
+                                    <strong>Mentor's Amount :</strong>
+                                </p></td>
+                                <td class="text-center">
+                                <p>
+                                    <strong>{{userpayment.amount}}</strong>
+                                </p>
+                                <p>
+                                    <strong>{{userpayment.totalAmountToMentor}}</strong>
+                                </p></td>
+                            </tr>
+                            <tr>
+                               
+                                <td>   </td>
+                                <td class="text-right"><p><strong>Total: </strong></p></td>
+                                <td class="text-center text-danger"><p><strong>{{userpayment.totalAmountToMentor}}</strong></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-success btn-lg btn-block" >
+                        {{userpayment.remarks}}   
+                    </button>
+                </div>
+            </div>
+        </div>

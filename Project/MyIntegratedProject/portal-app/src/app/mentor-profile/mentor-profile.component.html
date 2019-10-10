@@ -1,0 +1,144 @@
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!--<script >$(document).ready(function() {
+    var panels = $('.user-infos');
+    var panelsButton = $('.dropdown-user');
+    panels.hide();
+
+    //Click dropdown
+    panelsButton.click(function() {
+        //get data-for attribute
+        var dataFor = $(this).attr('data-for');
+        var idFor = $(dataFor);
+
+        //current button
+        var currentButton = $(this);
+        idFor.slideToggle(400, function() {
+            //Completed slidetoggle
+            if(idFor.is(':visible'))
+            {
+                currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
+            }
+            else
+            {
+                currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
+            }
+        })
+    });
+
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $('button').click(function(e) {
+        e.preventDefault();
+        alert("This is a demo.\n :-)");
+    });
+});</script>  -->
+
+
+<div class="container">
+      <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+          
+
+       
+       <br>
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+      </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{mentor.firstName}}  {{mentor.lastName}}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " > <img alt="User Pic" src="https://banner2.kisspng.com/20180426/sxq/kisspng-mentorship-computer-icons-teacher-organization-creative-icon-5ae18121ab5f22.474859021524728097702.jpg" class="img-circle img-responsive"> </div>
+               
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Desiganation:</td>
+                        <td>Mentor</td>
+                      </tr>
+                      <tr>
+                        <td>Username:</td>
+                        <td>{{mentor.userName}}</td>
+                      </tr>
+
+                      <tr>
+                          <td>Registration Code</td>
+                          <td>{{mentor.regCode}}
+                          </td>
+                             
+                        </tr>
+
+                      <tr>
+                          <td>Contact Number</td>
+                          <td>{{mentor.contactNumber}}
+                          </td>
+                             
+                        </tr>
+                       
+                        <tr>
+                            <td>Linkedin Url</td>
+                            <td>{{mentor.linkedinUrl}}
+                            </td>
+                               
+                          </tr>
+                          
+                      <tr>
+                        <td>years Of Experience:</td>
+                        <td>{{mentor.yearsOfExperience}}</td>
+                      </tr>
+                      <tr>
+                        <td>rating</td>
+                        <td>{{mentor.rating}}</td>
+                      </tr>
+                   
+                         <tr>
+                             
+                        <td>Status/Active</td>
+                        <td>{{mentor.active}}</td>
+                      </tr>
+                        <tr>
+                        <td>mentorProfile</td>
+                        <td>{{mentor.mentorProfile}}</td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td>{{mentor.email}}</td>
+                      </tr>
+                     
+                     
+                    </tbody>
+                  </table>
+                  
+                  <a routerLink="/mentor-dashboard" class="btn btn-primary">Home Page</a>
+                  <a routerLink="/home" class="btn btn-primary">LOGOUT</a>
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+                        <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                        <span class="pull-right">
+                            <a href="#" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a routerLink="/mentor-dashboard" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        </span>
+                    </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>

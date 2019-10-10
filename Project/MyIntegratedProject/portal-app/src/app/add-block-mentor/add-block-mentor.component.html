@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <div class="col-md-6">
+        <h2> Add/Block Details Mentor</h2>
+        
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th class="hidden">Id</th>
+            <th>Mentor Name</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+         <!-- <tr *ngFor="let user of users"> -->
+             <tr>
+            <td class="hidden">{{user.id}}</td>
+            <td>{{user.mentorname}}</td>
+            <td><button class="btn btn-danger" (click)="deleteUser(user)"> Add Mentor</button><button class="btn btn-danger" (click)="deleteUser(user)"> Block Mentor</button></td>
+          </tr>
+          </tbody>
+        </table>
+        </div>
+        
+        <div class="col-md-6">
+          <h2 class="text-center">Add Specialization Field</h2>
+        <form>
+          <div class="form-group">
+            <label for="course_name">Mentor name:</label>
+            <input type="text" [(ngModel)]="user.UserName" placeholder="UserName" name="UserName" class="form-control" id="user_name">
+          </div>
+        
+          <button class="btn btn-success" (click)="createUser()">Add Record</button>
+        </form>
+        </div>

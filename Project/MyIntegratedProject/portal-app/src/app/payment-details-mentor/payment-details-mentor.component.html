@@ -1,0 +1,60 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <div class="col-md-6">
+        <h2> Payment Details course wise</h2>
+        
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th class="hidden">Id</th>
+            <th>Course</th>
+            <th>User Name</th>
+            <th>Course Fee</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+         <!-- <tr *ngFor="let user of users"> -->
+             <tr>
+            <td class="hidden">{{user.id}}</td>
+            <td>{{user.course}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.courseFee}}</td>
+            <td>{{user.status}}</td>
+            <td><button class="btn btn-danger" (click)="deleteUser(user)"> Reminder</button><button class="btn btn-danger" (click)="deleteUser(user)"> Details</button></td>
+          </tr>
+          </tbody>
+        </table>
+        </div>
+        
+        <div class="col-md-6">
+          <h2 class="text-center">Enroll User into course</h2>
+        <form>
+          <div class="form-group">
+            <label for="course_name">Course name:</label>
+            <input type="text" [(ngModel)]="user.course" placeholder="Course Name" name="course" class="form-control" id="course">
+          </div>
+           
+           <div class="form-group">
+            <label for="user_name">User name:</label>
+            <input type="text" [(ngModel)]="user.name" placeholder="User name" name="username" class="form-control" id="username">
+          </div>
+           
+           <div class="form-group">
+            <label for="course_fee">Course fee:</label>
+            <input type="text" [(ngModel)]="user.coursefee" placeholder="Course Fee" name="coursefee" class="form-control" id="coursefee">
+          </div>
+        
+          <div class="form-group">
+            <label for="course_name">Status:</label>
+            <input type="boolean" [(ngModel)]="user.status" placeholder="Fee Status" name="coursestatus" class="form-control" id="coursestatus">
+          </div>
+        
+          <button class="btn btn-success" (click)="createUser()">Add Record</button>
+        </form>
+        </div>

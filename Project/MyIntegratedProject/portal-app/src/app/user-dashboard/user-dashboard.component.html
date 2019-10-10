@@ -1,0 +1,69 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<div class="jumbotron text-center">
+    <h3>WELCOME USER :) !</h3>
+    <button style="float:right" routerLink="/user-login">LOGOUT</button>      
+</div>
+<div class="topnav">
+<a routerLink="/user-profile">USER PROFILE DESCRIPTION</a>
+<br>
+<a routerLink="/trainingview">TRAINING COURSES ENROLLED</a>
+<br>
+
+  <div class="container">
+<br/>
+<div class="container">
+               
+<div class="row">
+        <p style="color:  white">SEARCH TRAINING'S by </p>
+    <div class="col-md-3 col-md-offset-1">
+            
+        <form action="" class="search-form">
+            <div >
+                <label for="search" class="sr-only">Search</label>
+                <input type="text" class="form-control"  [(ngModel)]="startdate" placeholder="Start Date" name="startdate" class="form-control" id="startdate">
+                 <!-- <span class="glyphicon glyphicon-search form-control-feedback"></span>-->
+            </div>
+        </form>
+    </div>
+   <div class="col-md-3 col-md-offset-0">
+            <form action="" class="search-form">
+                <div > <!--class="form-group has-feedback"-->
+                    <label for="search" class="sr-only">Search</label> 
+                    <input type="text" class="form-control" [(ngModel)]="enddate" placeholder="End Date" name="enddate" class="form-control" id="enddate">
+                     
+                </div>
+            </form>
+           
+        </div>  
+        <button style="float:right" (click)="findtraining(startdate,enddate)">Search</button>
+</div>
+</div>
+</div>  
+
+<!--<input style="width: 30% ;box-align:center "  [(ngModel)]="startdate" placeholder="Start Date" name="startdate" class="form-control" id="startdate">
+    <input style="width: 30% ; align-items:center" [(ngModel)]="enddate" placeholder="End Date" name="enddate" class="form-control" id="enddate">
+    <button  (click)="findtraining(startdate,enddate)">Search</button> -->
+<br>
+
+<!--<a href="/user-payment">TRAINER'S PAYMENT HISTORY</a> -->
+<a routerLink="/addpayment">MAKE PAYMENT FOR TRAINING</a>
+
+<br>
+
+<br>
+
+<!--<a href="/user-payment">TRAINER'S PAYMENT HISTORY</a> -->
+<a routerLink="/paymentuserview">VIEW MY PAYMENT FOR HISTORY</a>
+
+<br>
+
+
+
+</div>
+
+<br>
+<br>

@@ -1,0 +1,41 @@
+<div class="col-md-6">
+    <h2> Payment Details</h2>
+    <a style="margin-left:10px" routerLink="/addpayment">Add Payment</a>
+    <br>
+    
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+         
+        <th>txnType</th>
+        <th>amount</th>
+        <th>remarks</th>
+
+        <th>mentorId</th>
+        <th>trainingId</th>
+        <th>paymentType</th>
+        <th>CreatedAt</th>
+      <th>UpdatedAt
+      </th>
+    <!-- <th>Action</th>-->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let payment of payments">
+        <td class="hidden">{{payment.id}}</td>
+        <td>{{payment.txnType}}</td>
+        <td>{{payment.amount}}</td>
+        <td>{{payment.remarks}}</td>
+        <td>{{payment.mentorId}}</td>
+        <td>{{payment.trainingId}}</td>
+        <td>{{payment.paymentType}}</td>
+        <td>{{payment.createdAt | date}}</td>
+      <td>{{payment.updatedAt | date}}</td>
+     <!--  <td><button class="btn btn-danger" (click)="deletePayment(payment)"> Delete Payment</button></td>--> 
+      </tr>
+      </tbody>
+    </table>
+
+    <button> <a style="margin-left:10px" routerLink="/admin-dashboard">Back</a> </button>
+    </div>

@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <div class="col-md-6">
+        <h2>  Change Fee</h2>
+        
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th class="hidden">Id</th>
+            <th>Technology Name</th>
+            <th>New Fee</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!--<tr *ngFor="let user of users"> -->
+              <tr>
+            <td class="hidden">{{user.id}}</td>
+            <td>{{user.technologyname}}</td>
+            <td>{{user.fee}}</td>
+            <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete Record</button></td>
+          </tr>
+          </tbody>
+        </table>
+        </div>
+        
+        <div class="col-md-6">
+          <h2 class="text-center">Change Fee</h2>
+        <form>
+          <div class="form-group">
+            <label for="course_name">Technology name:</label>
+            <input type="text" [(ngModel)]="user.TechnologyName" placeholder="TechnologyName" name="TechnologyName" class="form-control" id="technology_name">
+          </div>
+          <div class="form-group">
+            <label for="course_name">New Fee:</label>
+            <input type="text" [(ngModel)]="user.newfee" placeholder="newfee" name="newfee" class="form-control" id="newfee">
+          </div>
+        
+          <button class="btn btn-success" (click)="createUser()">Change Fee</button>
+        </form>
+        </div>
+        

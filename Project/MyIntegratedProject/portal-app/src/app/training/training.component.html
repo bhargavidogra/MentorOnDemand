@@ -1,0 +1,53 @@
+<div class="col-md-6">
+    <h2> Training Details</h2>
+    <a style="margin-left:10px" routerLink="/addtraining">Add Trainings</a>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+         
+        <th>progress</th>
+        <th>commissionAmount</th>
+        <th>rating</th>
+        <th>avgRating</th>
+        <th>startDate</th>
+        <th>endDate</th>
+        <th>startTime</th>
+        <th>endTime</th>
+        <th>amountReceived</th>
+       
+     <th>fees</th>
+     <th>status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let tr of trainings">
+        <td class="hidden">{{tr.id}}</td>
+        <td>
+            <circle-progress
+            [percent]="tr.progress"
+            [radius]="25"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="4"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="200"
+          ></circle-progress> </td>
+        <td>{{tr.commissionAmount}}</td>
+        <td><pre><b>{{tr.rating}}</b></pre></td>
+        <td>{{tr.avgRating}}</td>
+        <td>{{tr.startDate}}</td>
+        <td>{{tr.endDate}}</td>
+        <td>{{tr.startTime}}</td>
+        <td>{{tr.endTime}}</td>
+        <td>{{tr.amountReceived}}</td>
+       
+        <td>{{tr.fees}}</td>
+        <td>{{tr.status}}</td>
+       
+      </tr>
+      </tbody>
+    </table>
+    <button> <a style="margin-left:10px" routerLink="/admin-dashboard">Back</a> </button>
+    </div>

@@ -1,0 +1,63 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<div class="bg">
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-8">
+
+  
+  
+<form>
+    <h2 class="text-center">Add Technology</h2>
+  <div class="form-group">
+    <label for="techName">TECHNOLOGY NAME:</label>
+    <input [(ngModel)]="technologies.techName" placeholder="techName" name="techName" class="form-control" id="techName">
+  </div>
+
+  <div class="form-group">
+    <label for="description">DESCRIPTION:</label>
+    <input [(ngModel)]="technologies.description" placeholder="description" name="description" class="form-control" id="description">
+  </div>
+  <div class="form-group">
+    <label for="createdAt">CREATED AT:</label>
+    <input [(ngModel)]="technologies.createdAt" placeholder="createdAt" name="createdAt" class="form-control" id="createdAt">
+  </div>
+
+  
+  <div class="form-group">
+    <label for="updatedAt">UPDATED AT:</label>
+    <input [(ngModel)]="technologies.updatedAt" placeholder="updatedAt" name="updatedAt" class="form-control" id="updatedAt">
+  </div>
+
+  
+
+  
+
+  
+  
+
+  <button class="btn btn-success" (click)="createTechnology()">Create</button>
+</form>
+</div>
+<div class="col-lg-2">
+</div>
+</div>
+
+</div>
+</article>
+</div>
+
+
+<footer>
+<br>
+<br>
+<br>
+<br>
+</footer>

@@ -1,0 +1,119 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<div class="bg">
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-8">
+  
+<form>
+    <h2 class="text-center" style="color:black;font-family: Verdana, Geneva, Tahoma, sans-serif">Add Mentor</h2>
+    
+    <legend > Enter Usernamee and Password :</legend>
+    
+    <label for="userName">userName:</label>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input [(ngModel)]="mentor.userName" placeholder="userName" name="userName" class="form-control" id="userName" required/>
+    </div>
+    <label for="password">password:</label>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input [(ngModel)]="mentor.password" placeholder="password" name="password" class="form-control" id="password" required/>
+    </div>
+      <br>
+
+    <legend> Enter Personal Detail :</legend>
+
+  <div class="form-group">
+    <label for="firstName">First Name*:</label>
+    <input  [(ngModel)]="mentor.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName" required>
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name*:</label>
+    <input [(ngModel)]="mentor.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName" required>
+  </div>
+
+  <div class="form-group">
+      <label for="contactNumber">contact Number:</label>
+      <input type="contactNumber" [(ngModel)]="mentor.contactNumber" placeholder="contactNumber" name="contactNumber" class="form-control" id="contactNumber">
+    </div>
+
+  <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" [(ngModel)]="mentor.email" placeholder="Email" name="email" class="form-control" id="email">
+    </div>
+   
+    <div class="form-group">
+        <label for="regCode">regCode:</label>
+        <input type="regCode" [(ngModel)]="mentor.regCode" placeholder="regCode" name="regCode" class="form-control" id="regCode">
+      </div>
+
+      <div class="form-group">
+          <label for="role">role:</label>
+          <input type="role" [(ngModel)]="mentor.role" placeholder="role" name="role" class="form-control" id="role">
+        </div>
+        <div class="form-group">
+            <label for="linkedinUrl">linkedinUrl:</label>
+            <input type="linkedinUrl" [(ngModel)]="mentor.linkedinUrl" placeholder="linkedinUrl" name="linkedinUrl" class="form-control" id="linkedinUrl">
+          </div> 
+          <div class="form-group">
+              <label for="yearsOfExperience">yearsOfExperience:</label>
+              <input type="yearsOfExperience" [(ngModel)]="mentor.yearsOfExperience" placeholder="yearsOfExperience" name="yearsOfExperience" class="form-control" id="yearsOfExperience">
+            </div>
+            <div class="form-group">
+                <label for="active">active:</label>
+                <input type="active" [(ngModel)]="mentor.active" placeholder="active" name="active" class="form-control" id="active">
+              </div> 
+              <div class="form-group">
+                  <label for="confirmedSignUp">confirmedSignUp:</label>
+                  <input type="confirmedSignUp" [(ngModel)]="mentor.confirmedSignUp" placeholder="confirmedSignUp" name="confirmedSignUp" class="form-control" id="confirmedSignUp">
+                </div> 
+                <div class="form-group">
+                    <label for="resetPassword">resetPassword:</label>
+                    <input type="resetPassword" [(ngModel)]="mentor.resetPassword" placeholder="resetPassword" name="resetPassword" class="form-control" id="resetPassword">
+                  </div> 
+                    <div class="form-group">
+                      <label for="resetPasswordDate">resetPasswordDate:</label>
+                      <input type="resetPasswordDate" [(ngModel)]="mentor.resetPasswordDate" placeholder="resetPasswordDate" name="resetPasswordDate" class="form-control" id="resetPasswordDate">
+                    </div>
+                    <div class="form-group">
+                      <label for="timeZone">timeZone:</label>
+                      <input type="timeZone" [(ngModel)]="mentor.timeZone" placeholder="timeZone" name="timeZone" class="form-control" id="timeZone">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="rating">rating:</label>
+                      <input type="rating" [(ngModel)]="mentor.rating" placeholder="rating" name="rating" class="form-control" id="rating">
+                    </div>
+                    <div class="form-group">
+                      <label for="mentorProfile">mentorProfile:</label>
+                      <input type="mentorProfile" [(ngModel)]="mentor.mentorProfile" placeholder="mentorProfile" name="rating" class="form-control" id="mentorProfile">
+                    </div>
+
+
+  <button class="btn btn-success" (click)="createUser()">Create</button>
+</form>
+</div>
+<div class="col-lg-2">
+</div>
+</div>
+
+</div>
+</article>
+</div>
+
+
+<footer>
+<br>
+<br>
+<br>
+<br>
+</footer>

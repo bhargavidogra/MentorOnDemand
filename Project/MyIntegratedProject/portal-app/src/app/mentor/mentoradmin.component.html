@@ -1,0 +1,50 @@
+<div class="col-md-6">
+<h2> Mentor Details</h2>
+<a style="margin-left:10px" routerLink="/addmentor">Add Mentor</a>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th class="hidden">Id</th>
+     
+    <th>userName</th>
+    <th>password</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>contactNumber</th>
+    <th>Email</th>
+    <th>regCode</th>
+    <th>role</th>
+    <th>linkedinUrl</th>
+    <th>yearsOfExperience</th>
+    <th>active</th>
+    <th>confirmedSignUp</th>
+    <th>resetPassword</th>
+ <th>resetPasswordDate</th>
+    
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let mt of mentors">
+    <td class="hidden">{{mt.id}}</td>
+    <td>{{mt.userName}}</td>
+    <td>{{mt.password}}</td>
+    <td>{{mt.firstName}}</td>
+    <td>{{mt.lastName}}</td>
+    <td>{{mt.contactNumber}}</td>
+    <td>{{mt.email}}</td>
+    <td>{{mt.regCode}}</td>
+    <td>{{mt.role}}</td>
+    <td>{{mt.linkedinUrl}}</td>
+    <td>{{mt.yearsOfExperience}}</td>
+    <!--<td>{{mt.active}}</td> -->
+    <td  contenteditable="true"><textarea [(ngModel)]="mt.active" style="resize: none;" maxlength="5">{{mt.active}}</textarea></td>
+    <td>{{mt.confirmedSignUp}}</td>
+    <td>{{mt.resetPassword}}</td>
+    <td>{{mt.resetPasswordDate}}</td>
+    <td><button class="btn btn-danger" (click)="updateMentor(mt)"> Update Mentor</button></td>
+
+  </tr>
+  </tbody>
+</table>
+<button> <a style="margin-left:10px" routerLink="/admin-dashboard">Back</a> </button>
+</div>
